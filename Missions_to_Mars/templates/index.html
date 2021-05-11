@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Data</a></p>
+        </div>
+
+        <!-- News title and paragraph -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Mars News</h3>
+                <h4>{{mars_dict.mars_news_title}}</h4>
+                <p>{{mars_dict.body_par}}</p>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row">
+
+            <!-- Mars Image -->
+            <div class="col-md-8">
+                <h2>Mars Image</h2>
+                <img src="{{mars_dict.image_path}}" width=80% alt="Featured Image">
+            </div>
+            <!-- Table-->
+            <div class="col-md-4">
+                <h2>Mars Facts</h2>
+                <p>{{ mars_dict.html_table |safe }}</p>
+            </div>
+        </div>
+
+
+        <!-- Hemispheres -->
+        <div class="row">
+            <!-- First column -->
+            <div class="col-md-12">
+                <h2>Mars Hemispheres</h2>
+            </div>
+        </div>
+
+        <!-- two images in one row -->
+        <div class="row">
+            <div class="col-md-6" style="padding: 50px">
+                <div class="card">
+                    <img class="img-responsive" src={{mars_dict.hemisphere_image_urls.0.final_url}}>
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            {{mars_dict.hemisphere_image_urls.0.title}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding: 50px">
+                <div class="card">
+                    <img class="img-responsive" src={{mars_dict.hemisphere_image_urls.1.final_url}}>
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            {{mars_dict.hemisphere_image_urls.1.title}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- another two images in one row -->
+        <div class="row">
+            <div class="col-md-6" style="padding: 50px">
+                <div class="card">
+                    <img class="img-responsive" src={{mars_dict.hemisphere_image_urls.2.final_url}}>
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            {{mars_dict.hemisphere_image_urls.2.title}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding: 50px">
+                <div class="card">
+                    <img class="img-responsive" src={{mars_dict.hemisphere_image_urls.3.final_url}}>
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            {{mars_dict.hemisphere_image_urls.3.title}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
